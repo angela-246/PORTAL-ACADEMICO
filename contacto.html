@@ -90,8 +90,8 @@
             box-shadow: 0 4px 20px #00000018;
         }
 
-        .datablock {
-            background-color: #eee;
+        .data-block {
+            background-color: white;
             padding: 20px;
             margin-bottom: 30px;
             border-radius: 8px;
@@ -131,9 +131,47 @@
             padding: 20px;
             margin-bottom: 20px;
             border-left: 3px solid #ee72a5;
+            height: auto;
         }
 
-        
+        form {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 0px;
+            border-radius: 0px;
+            box-shadow: #00000013;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        button {
+            background: #ee72a5;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .horario-imagen {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0px auto;
+        }
+    
         footer {
             margin-left: 280px;
             text-align: center;
@@ -208,20 +246,32 @@
             <div class="data-block">
                 <h2 class="block-title-info">Contacto</h2>
                 <div class="info-details">
-                    <p><strong>Nombre:</strong>Angela Lucia Benites Cornejo</p>
-                    <p><strong>Correo:</strong>anhelaa04@gmail.com</p>
-                    <p><strong>Celular:</strong>+51 955 596 185</p>
-                    <p><strong>Outlook</strong>angela_benites1@usmp.pe</p>
+                    <p><strong>Nombre: </strong>Angela Lucia Benites Cornejo</p>
+                    <p><strong>Correo: </strong>anhelaa04@gmail.com</p>
+                    <p><strong>Celular: </strong>+51 955 596 185</p>
+                    <p><strong>Outlook: </strong>angela_benites1@usmp.pe</p>
                 </div>
             </div>
 
             <div class="section-header">
-                <h3>PONER ALGO AQUI</h3>
+                <h3>FORMULARIO DE CONTACTO</h3>
             </div>
 
             <div class="section-content">
-                <p>Aqui poner enlace o imagen</p>
-                <div style="height: 200px; background-color: white; margin-top: 10px;">
+                <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com">
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpiar</button>
+                </form>
+                <div style="height: 80px; background-color: white; margin-top: 10px;">
 
                 </div>
             </div>
@@ -231,10 +281,8 @@
             </div>
 
             <div class="section-content">
-                <p>agregar mi horio</p>
-                <div style="height: 500px; background-color: #fafafa; margin-top: 20px; border: 1px dashed #ccc;"></div>
+                <img src="horario.png" alt="Mi horario" class="horario-imagen">
             </div>
-            <p style="text-align: center; margin-top: 20px; color: #999;">FIN?</p>
         </div>
     </div>
 
