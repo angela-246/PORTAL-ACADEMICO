@@ -20,14 +20,13 @@
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #f5f5f5;
             padding: 0 0;
             z-index: 1000;
 
         }
 
         .sidebar-title {
-            color: #333;
+            color: #ffffff;
             text-align: left;
             padding: 40px 30px 60px 30px;
             font-size: 1.2rem;
@@ -37,7 +36,7 @@
         }
 
         .sidebar .nav-link{
-            color: #333;
+            color: #ffffff;
             padding: 15px 30px !important;
             font-size: 1rem;
             transition: background-color 0.3s, color 0.3s;
@@ -49,13 +48,49 @@
             margin-right: 15px;
             width: 20px;
             text-align: center;
-            color: #d8bfd8;
+            color: #ffffff;
+        }
+
+        .nav-link .fa-user-circle {
+            color: #000000 !important;
         }
 
         .sidebar .nav-link:hover, .sidebar .nav-link.active{
             color: #333 !important;
             background-color: #f5f5f5;
             font-weight: 600;
+        }
+        
+        .content {
+            margin-left: 280px;
+            flex-grow: 1;
+            padding: 50px 80px;
+            min-height: 100vh;
+        }
+
+        .main-titulo {
+            font-size: 4em;
+            font-size: bold;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: left;
+            padding-top: 20px;
+        }
+
+        .container-texto {
+            background-color: #ffffffd2;
+            color: black;
+            padding: 30px 40px;
+            border-radius: 5px;
+            max-width: 900px;
+            box-shadow: 0 4px 8px #00000023;
+        }
+
+        .container-texto p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #000000;
+            text-align: justify;
         }
 
         footer {
@@ -110,7 +145,7 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-    <nav class="sidebar bg-white">
+    <nav class="sidebar bg-black">
         <h5 class="sidebar-title">PORTAL ACADEMICO<br>PERSONAL</h5>
         <div class="container">
             <a class="nav-link " href="index.html">
@@ -123,6 +158,27 @@
                 <i class="fas fa-envelope"></i>Contacto</a>
         </div>
     </nav>
+
+    <main class="content">
+        
+        <h1 class="main-titulo">Perfil</h1>
+
+        <div class="container-texto">
+
+            <p>Bienvenidos a mi portafolio académico.</p>
+
+            <p>Este espacio refleja mi aprendizaje y crecimiento como estudiante de Ingeniería de Sistemas en la Universidad San Martín de Porres, perteneciente a la Facultad de Ingeniería y Arquitectura (FIA). Aquí comparto mi experiencia en el curso de Fundamentos de Diseño Web, donde he aprendido las bases para crear y estructurar sitios web de forma práctica y creativa.
+            </p>
+
+            <p>Durante el ciclo he adquirido nuevos conocimientos sobre diseño, programación y herramientas digitales que me han ayudado a comprender mejor cómo se construyen las páginas web y la importancia de una buena presentación visual. Cada tema estudiado ha sido una oportunidad para desarrollar mi interés por el área del desarrollo web.
+            </p>
+
+            <p>Este portafolio representa mi progreso y dedicación como estudiante en formación. Espero que, al revisarlo, puedan notar mi esfuerzo por seguir aprendiendo, mejorar mis habilidades y avanzar en mi camino dentro del mundo de la tecnología y el diseño web.
+            </p>
+
+        </div>
+
+    </main>
 
     <footer>
         © 2025 | Angelaaa
