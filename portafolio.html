@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Académico Personal</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-    
         body {
             background-color: #f5f0e1;
             color: #333;
@@ -20,9 +19,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            padding: 0 0;
             z-index: 1000;
-
         }
 
         .sidebar-title {
@@ -35,7 +32,7 @@
             border-bottom: 1px solid #eee;
         }
 
-        .sidebar .nav-link{
+        .sidebar .nav-link {
             color: #ffffff;
             padding: 15px 30px !important;
             font-size: 1rem;
@@ -44,18 +41,14 @@
             align-items: center;
         }
 
-        .sidebar .nav-link i{
+        .sidebar .nav-link i {
             margin-right: 15px;
             width: 20px;
             text-align: center;
             color: #ffffff;
         }
-        
-        .nav-link .fa-folder-open {
-            color: black !important;
-        }
 
-        .sidebar .nav-link:hover, .sidebar .nav-link.active{
+        .sidebar .nav-link:hover, .sidebar .nav-link.active {
             color: #333 !important;
             background-color: #f5f5f5;
             font-weight: 600;
@@ -72,63 +65,153 @@
             bottom: 0;
             box-sizing: border-box;
         }
-     @media (max-width: 768px) {
-        
-        .sidebar {
-            width: 100%; 
-            height: auto; 
-            position: relative; 
-            box-shadow: none;
-            border-right: none;
+
+
+        .buscador {
+            max-width: 500px;
+            margin: 30px auto;
+            display: flex;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
-        .content {
-            margin-left: 0;
-            min-height: auto;
-            padding-top: 20px;
-        }
-        
-        .text-box {
-            max-width: 90%; 
-            padding: 30px 40px;
-            text-align: center; 
-            margin: 20px auto; 
+        .buscador input {
+            border: none;
+            flex: 1;
+            padding: 12px 20px;
+            outline: none;
+            font-size: 16px;
         }
 
-        .content-bg {
-            display: none;
+        .buscador button {
+            background: #000;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background 0.3s;
         }
 
-        footer {
-            margin-left: 0;
-            width: 100%;
-            position: relative;
+        .buscador button:hover {
+            background: #333;
         }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+            }
+
+            .content {
+                margin-left: 0;
+                padding-top: 20px;
+            }
+
+            footer {
+                margin-left: 0;
+                width: 100%;
+                position: relative;
+            }
         }
-    
     </style>
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <nav class="sidebar bg-black">
         <h5 class="sidebar-title">PORTAL ACADEMICO<br>PERSONAL</h5>
         <div class="container">
-            <a class="nav-link " href="index.html">
-                <i class="fas fa-home"></i>Pagina principal</a>
-            <a class="nav-link " href="perfil.html">
-                <i class="fas fa-user-circle"></i>Perfil</a>
-            <a class="nav-link active" href="portafolio.html">
-                <i class="fas fa-folder-open"></i>Portafolio</a>
-            <a class="nav-link " href="contacto.html">
-                <i class="fas fa-envelope"></i>Contacto</a>
+            <a class="nav-link" href="index.html"><i class="fas fa-home"></i>Página principal</a>
+            <a class="nav-link" href="perfil.html"><i class="fas fa-user-circle"></i>Perfil</a>
+            <a class="nav-link active" href="portafolio.html"><i class="fas fa-folder-open"></i>Portafolio</a>
+            <a class="nav-link" href="contacto.html"><i class="fas fa-envelope"></i>Contacto</a>
         </div>
     </nav>
-    
+
+    <main class="content" style="margin-left: 280px; padding: 60px 40px; background-color: #f5f0e1; min-height: 100vh;">
+        <div class="container">
+            <h1 class="mb-4 text-center" style="color:#000; font-weight:700;">Mis trabajos</h1>
+            <p class="text-center mb-4" style="max-width:800px; margin:auto; font-size:1.1rem; color:#444;">
+                Aquí presento mis trabajos y proyectos realizados durante mi formación académica.  
+                Puedes verlos o descargarlos directamente haciendo clic en los botones de abajo.
+            </p>
+
+        
+            <div class="buscador">
+                <input type="text" id="busqueda" placeholder="Buscar trabajos..." onkeyup="buscar()">
+                <button onclick="buscar()"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="row g-4" id="lista-trabajos">
+                <div class="col-md-4 trabajo">
+                    <div class="card shadow-sm border-0 h-100 text-center p-3">
+                        <h4 class="mt-3">Ensayo de Filosofía</h4>
+                        <p>Un análisis reflexivo sobre la ética y el pensamiento moderno.</p>
+                        <a href="trabajos/filosofia.pdf" class="btn btn-dark w-75 mx-auto" download>
+                            <i class="fas fa-download me-2"></i>Descargar trabajo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 trabajo">
+                    <div class="card shadow-sm border-0 h-100 text-center p-3">
+                        <h4 class="mt-3">Proyecto de Lenguaje</h4>
+                        <p>Exploración del poder comunicativo en diferentes contextos académicos.</p>
+                        <a href="trabajos/lenguaje.pdf" class="btn btn-dark w-75 mx-auto" download>
+                            <i class="fas fa-download me-2"></i>Descargar trabajo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 trabajo">
+                    <div class="card shadow-sm border-0 h-100 text-center p-3">
+                        <h4 class="mt-3">Método de Estudio</h4>
+                        <p>Propuesta de estrategias para mejorar la organización y aprendizaje personal.</p>
+                        <a href="trabajos/metodo.pdf" class="btn btn-dark w-75 mx-auto" download>
+                            <i class="fas fa-download me-2"></i>Descargar trabajo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="trabajos.zip" class="btn btn-outline-dark btn-lg" download>
+                    <i class="fas fa-file-archive me-2"></i>Descargar todos los trabajos
+                </a>
+            </div>
+
+            <p id="no-resultados" class="text-center mt-4" style="display:none; color:#777;">No se encontraron resultados 😕</p>
+        </div>
+    </main>
+
     <footer>
         © 2025 | Angelaaa
     </footer>
 
+
+    <script>
+        function buscar() {
+            const texto = document.getElementById("busqueda").value.toLowerCase();
+            const trabajos = document.querySelectorAll(".trabajo");
+            let encontrados = 0;
+
+            trabajos.forEach(trabajo => {
+                const contenido = trabajo.textContent.toLowerCase();
+                if (contenido.includes(texto)) {
+                    trabajo.style.display = "block";
+                    encontrados++;
+                } else {
+                    trabajo.style.display = "none";
+                }
+            });
+
+            document.getElementById("no-resultados").style.display = (encontrados === 0 && texto !== "") ? "block" : "none";
+        }
+    </script>
 </body>
 </html>
